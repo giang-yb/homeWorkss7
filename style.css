@@ -6,6 +6,15 @@
 .content {
     display: flex;
     justify-content: space-between;
+    height: calc(100% - 68px);
+}
+
+body{
+    height: 100vh;
+}
+
+section{
+    height: 100vh;
 }
 
 .content--left {
@@ -55,13 +64,12 @@
 }
 
 .content--right {
+    background-image: url("./img/dao-trong-le-wind.jpg");
+    background-size: cover;
+    background-position: center;    
     width: 50%;
 }
 
-.content--right img {
-    width: 958.7px;
-    height: 1000px;
-}
 
 .footer{
     font-size: 24px;
