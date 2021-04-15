@@ -1,4 +1,4 @@
-const quotesA = [{
+const quotes = [{
     "quoteText": "Genius is one percent inspiration and ninety-nine percent perspiration.",
     "quoteAuthor": "Thomas Edison"
 }, {
@@ -199,22 +199,15 @@ const quotesA = [{
 }
 ];
 
-// changeQuotes();
+changeQuotes();
+function changeQuotes() {
+    let index = Math.floor(Math.random() * quotes.length);
+    let newQuotes = document.getElementById("quotes");
+    let newAuthors = document.getElementById("authors");
+    newQuotes.innerText = quotes[index].quoteText;
+    newAuthors.innerText = quotes[index].quoteAuthor;
+}
 
-// function changeQuotes(){
-//     let index = Math.floor(Math.random() * quotes.length);
-//     let newQuotes = document.getElementById("quotes");
-//     let newAuthors = document.getElementById("authors");
-//     newQuotes.innerText = quotes[index].quoteText;
-//     newAuthors.innerText = quotes[index].quoteAuthor;
-// }
-
-let change = document.getElementById("change");
-let quotes = document.getElementById("quotes");
-let authors = document.getElementById("authors");
-
-change.addEventListener('click', () => {
-    let index = Math.floor(Math.random() * quotesA.length);
-    quotes.innerHTML = quotesA[index].quoteText;
-    authors.innerHTML = quotesA[index].quoteAuthor;
-})
+function reLoad(){
+    changeQuotes();
+}
